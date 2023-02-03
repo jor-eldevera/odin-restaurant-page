@@ -1,4 +1,6 @@
 import appendHomeToContent from "./appendHomeToContent";
+import appendMenuToContent from "./appendMenuToContent";
+import appendContactToContent from "./appendContactToContent";
 import "./styles.css";
 
 // This is the div#content tag
@@ -20,11 +22,13 @@ homeLi.addEventListener("click", function() {
 
 const menuLi = document.getElementById("menu");
 menuLi.addEventListener("click", function() {
-
+    clearContent(content);
+    appendMenuToContent(content);
 });
 
 const contactLi = document.getElementById("contact");
 contactLi.addEventListener("click", function() {
-
+    clearContent(content);
+    appendContactToContent(content);
 });
 
